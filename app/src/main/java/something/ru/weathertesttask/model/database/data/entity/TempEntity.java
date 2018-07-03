@@ -1,4 +1,4 @@
-package something.ru.weathertesttask.model.database.model.dbEntity;
+package something.ru.weathertesttask.model.database.data.entity;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;

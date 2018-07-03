@@ -6,11 +6,11 @@ import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
 import something.ru.weathertesttask.model.database.dao.CityDao;
-import something.ru.weathertesttask.model.database.model.dbEntity.CityEntity;
-import something.ru.weathertesttask.model.database.model.dbEntity.CityTypeEntity;
-import something.ru.weathertesttask.model.database.model.dbEntity.MonthEntity;
-import something.ru.weathertesttask.model.database.model.dbEntity.SeasonEntity;
-import something.ru.weathertesttask.model.database.model.dbEntity.TempEntity;
+import something.ru.weathertesttask.model.database.data.entity.CityEntity;
+import something.ru.weathertesttask.model.database.data.entity.CityTypeEntity;
+import something.ru.weathertesttask.model.database.data.entity.MonthEntity;
+import something.ru.weathertesttask.model.database.data.entity.SeasonEntity;
+import something.ru.weathertesttask.model.database.data.entity.TempEntity;
 
 @Database(entities = {CityEntity.class, CityTypeEntity.class, MonthEntity.class, SeasonEntity.class,
         TempEntity.class}, version = 1, exportSchema = false)
@@ -20,7 +20,7 @@ public abstract class AppRoomDatabase extends RoomDatabase {
     private static AppRoomDatabase appRoomDatabase;
 
 
-    private static AppRoomDatabase getInstance(Context context) {
+    public static AppRoomDatabase getInstance(Context context) {
         if (appRoomDatabase == null) {
             synchronized (LOCK) {
                 appRoomDatabase = Room.databaseBuilder(context.getApplicationContext(),

@@ -1,30 +1,27 @@
-package something.ru.weathertesttask.model.database.model.dbEntity;
+package something.ru.weathertesttask.model.database.data.entity;
 
-import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "city")
-public class CityEntity {
+@Entity(tableName = "season")
+public class SeasonEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;
-    @ColumnInfo(name = "type_id")
-    private int typeId;
     private String name;
+    private float value;
 
     @Ignore
-    public CityEntity(int typeId, String name) {
-        this.typeId = typeId;
+    public SeasonEntity(String name, float value) {
         this.name = name;
+        this.value = value;
     }
 
-    public CityEntity(int id, int typeId, String name) {
+    public SeasonEntity(int id, String name, float value) {
         this.id = id;
-        this.typeId = typeId;
         this.name = name;
+        this.value = value;
     }
-
 
     public int getId() {
         return id;
@@ -34,8 +31,8 @@ public class CityEntity {
         return name;
     }
 
-    public int getTypeId() {
-        return typeId;
+    public float getValue() {
+        return value;
     }
 
     public void setId(int id) {
@@ -46,7 +43,7 @@ public class CityEntity {
         this.name = name;
     }
 
-    public void setTypeId(int typeId) {
-        this.typeId = typeId;
+    public void setValue(float value) {
+        this.value = value;
     }
 }
