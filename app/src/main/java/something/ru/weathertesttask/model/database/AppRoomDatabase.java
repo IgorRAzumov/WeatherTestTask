@@ -1,16 +1,16 @@
-package something.ru.weathertesttask.model.entity.db;
+package something.ru.weathertesttask.model.database;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import something.ru.weathertesttask.model.dao.CityDao;
-import something.ru.weathertesttask.model.entity.dbEntity.CityEntity;
-import something.ru.weathertesttask.model.entity.dbEntity.CityTypeEntity;
-import something.ru.weathertesttask.model.entity.dbEntity.MonthEntity;
-import something.ru.weathertesttask.model.entity.dbEntity.SeasonEntity;
-import something.ru.weathertesttask.model.entity.dbEntity.TempEntity;
+import something.ru.weathertesttask.model.database.dao.CityDao;
+import something.ru.weathertesttask.model.database.model.dbEntity.CityEntity;
+import something.ru.weathertesttask.model.database.model.dbEntity.CityTypeEntity;
+import something.ru.weathertesttask.model.database.model.dbEntity.MonthEntity;
+import something.ru.weathertesttask.model.database.model.dbEntity.SeasonEntity;
+import something.ru.weathertesttask.model.database.model.dbEntity.TempEntity;
 
 @Database(entities = {CityEntity.class, CityTypeEntity.class, MonthEntity.class, SeasonEntity.class,
         TempEntity.class}, version = 1, exportSchema = false)

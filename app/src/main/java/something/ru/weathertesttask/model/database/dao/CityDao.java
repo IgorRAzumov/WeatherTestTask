@@ -1,4 +1,4 @@
-package something.ru.weathertesttask.model.dao;
+package something.ru.weathertesttask.model.database.dao;
 
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
@@ -10,9 +10,9 @@ import android.arch.persistence.room.Update;
 
 import java.util.List;
 
-import something.ru.weathertesttask.model.entity.CityWithMonthsTemperature;
-import something.ru.weathertesttask.model.entity.CityWithSeasonsTemperature;
-import something.ru.weathertesttask.model.entity.dbEntity.CityEntity;
+import something.ru.weathertesttask.model.database.model.CityWithMonthsTemperature;
+import something.ru.weathertesttask.model.database.model.CityWithSeasonsTemperature;
+import something.ru.weathertesttask.model.database.model.dbEntity.CityEntity;
 @Dao
 public interface CityDao {
     @Transaction

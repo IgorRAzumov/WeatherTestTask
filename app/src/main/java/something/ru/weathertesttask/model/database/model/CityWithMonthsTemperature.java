@@ -1,14 +1,13 @@
-package something.ru.weathertesttask.model.entity;
+package something.ru.weathertesttask.model.database.model;
 
 import android.arch.persistence.room.Embedded;
 import android.arch.persistence.room.Relation;
 
 import java.util.List;
 
-import something.ru.weathertesttask.model.entity.dbEntity.CityEntity;
-import something.ru.weathertesttask.model.entity.dbEntity.CityTypeEntity;
-import something.ru.weathertesttask.model.entity.dbEntity.MonthEntity;
-import something.ru.weathertesttask.model.entity.dbEntity.TempEntity;
+import something.ru.weathertesttask.model.database.model.dbEntity.CityEntity;
+import something.ru.weathertesttask.model.database.model.dbEntity.CityTypeEntity;
+import something.ru.weathertesttask.model.database.model.dbEntity.TempEntity;
 
 public class CityWithMonthsTemperature {
     @Embedded

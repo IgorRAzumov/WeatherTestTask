@@ -1,7 +1,7 @@
-package something.ru.weathertesttask.model.ui;
+package something.ru.weathertesttask.ui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import something.ru.weathertesttask.R;
 
