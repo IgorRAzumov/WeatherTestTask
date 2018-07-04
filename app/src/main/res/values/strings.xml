@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Weather Test Task</string>
+    <string name="tiet_act_main_hint">Введите название города</string>
 </resources>

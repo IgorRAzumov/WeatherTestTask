@@ -5,7 +5,12 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "city")
+@Entity(tableName = "city")/*, foreignKeys = {
+        @ForeignKey(entity = CityTypeEntity.class,
+                parentColumns = "id",
+                childColumns = "type_id",
+                onDelete = ForeignKey.CASCADE)},
+        indices = {@Index(value = {"type_id", "name"}, unique = true)})*/
 public class CityEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;

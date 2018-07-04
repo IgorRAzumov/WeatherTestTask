@@ -32,12 +32,16 @@ dependencies {
 
     implementation "android.arch.lifecycle:common-java8:$lifecycle_version"
     implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version"
 
     implementation "android.arch.persistence.room:runtime:$room_version"
     annotationProcessor "android.arch.persistence.room:compiler:$room_version"
 
+    implementation 'com.facebook.stetho:stetho:1.4.2'
+
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "com.android.support.test:runner:$support_test_version"
     androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_version"
+    implementation 'com.android.support:design:27.1.1'
 }

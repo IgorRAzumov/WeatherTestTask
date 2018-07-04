@@ -1,10 +1,11 @@
-package something.ru.weathertesttask.ui;
+package something.ru.weathertesttask.ui.viewModel.factory;
 
 import android.arch.lifecycle.ViewModel;
 import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
 import something.ru.weathertesttask.model.Repository;
+import something.ru.weathertesttask.ui.viewModel.MainActivityViewModel;
 
 public class MainViewModelFactory extends ViewModelProvider.NewInstanceFactory{
     private final Repository repository;

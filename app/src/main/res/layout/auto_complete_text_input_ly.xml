@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app:android.support.design.widget.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/til_act_main_city_entry"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:hintTextAppearance="@style/EditTexInputLlyHintStyle"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <AutoCompleteTextView
+        android:id="@+id/actv_act_main_city_entry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:completionThreshold="3"
+        android:hint="@string/tiet_act_main_hint"
+        android:inputType="textPostalAddress"
+        android:singleLine="true"
+        android:theme="@style/TextInputLlyEditTextStyle" />
+</app:android.support.design.widget.TextInputLayout>

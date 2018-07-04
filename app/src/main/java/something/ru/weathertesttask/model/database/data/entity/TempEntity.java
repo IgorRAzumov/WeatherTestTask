@@ -5,7 +5,20 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "temperature")
+@Entity(tableName = "temperature")/*, foreignKeys = {
+        @ForeignKey(entity = CityEntity.class,
+                parentColumns = "id",
+                childColumns = "city_id",
+                onDelete = ForeignKey.CASCADE),
+        @ForeignKey(entity = SeasonEntity.class,
+                parentColumns = "id",
+                childColumns = "season_id",
+                onDelete = ForeignKey.CASCADE),
+        @ForeignKey(entity = MonthEntity.class,
+                parentColumns = "id",
+                childColumns = "month_id",
+                onDelete = ForeignKey.CASCADE)},
+        indices = {@Index(value = {"city_id", "month_id", "season_id"}, unique = true)})*/
 public class TempEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;
