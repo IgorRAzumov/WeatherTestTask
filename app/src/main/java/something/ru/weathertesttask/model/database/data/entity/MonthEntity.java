@@ -5,7 +5,11 @@ import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "month", indices = {@Index(value = {"name"}, unique = true)})
+import static something.ru.weathertesttask.model.database.Contract.TABLE_MONTH;
+import static something.ru.weathertesttask.model.database.Contract.TABLE_MONTH_COLUMN_NAME;
+
+@Entity(tableName = TABLE_MONTH,
+        indices = {@Index(value = {TABLE_MONTH_COLUMN_NAME}, unique = true)})
 public class MonthEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;

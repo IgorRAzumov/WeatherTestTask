@@ -6,20 +6,20 @@ import android.arch.lifecycle.ViewModel;
 import java.util.List;
 
 import something.ru.weathertesttask.model.Repository;
+import something.ru.weathertesttask.model.database.data.CityWithType;
 import something.ru.weathertesttask.model.database.data.entity.CityEntity;
 
-public class MainActivityViewModel extends ViewModel {
+public class MainViewModel extends ViewModel {
     private final Repository repository;
-
     private LiveData<CityEntity> city;
     private LiveData<List<String>> seasons;
 
-    public MainActivityViewModel(Repository repository) {
+    public MainViewModel(Repository repository) {
         this.repository = repository;
         seasons = repository.getAllSeasons();
     }
 
-    public List<CityEntity> getCities(String constraint) {
+    public List<CityWithType> getCities(String constraint) {
         return repository.getCities(constraint.toUpperCase().trim());
 
     }
@@ -43,8 +43,8 @@ public class MainActivityViewModel extends ViewModel {
         return seasons;
     }
 
-    public int getSeasonAvgTemp() {
-        return 0;
+    public LiveData<Float> getSeasonAvgTemp(String seasonsName, String cityName) {
+        return repository.getSeasonAvgTemp(seasonsName, cityName);
     }
 
     public LiveData<CityEntity> getCurrentCity() {

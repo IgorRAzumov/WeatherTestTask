@@ -6,17 +6,20 @@ import android.arch.persistence.room.Relation;
 import java.util.List;
 
 import something.ru.weathertesttask.model.database.data.entity.CityEntity;
-import something.ru.weathertesttask.model.database.data.entity.CityTypeEntity;
 import something.ru.weathertesttask.model.database.data.entity.TempEntity;
+
+import static something.ru.weathertesttask.model.database.Contract.TABLE_CITY_COLUMN_ID;
+import static something.ru.weathertesttask.model.database.Contract.TABLE_TEMPERATURE_COLUMN_ID;
 
 
 public class CityWithMonthsTemp {
     @Embedded
     public CityEntity city;
+    @Relation(parentColumn = TABLE_CITY_COLUMN_ID, entityColumn = TABLE_TEMPERATURE_COLUMN_ID)
+    public List<TempEntity> tempEntityList;
 
-    @Relation(parentColumn = "type_id", entityColumn = "id")
-    public List<CityTypeEntity> cityTypeEntity;
+    public CityEntity getCity() {
+        return city;
+    }
 
-    @Relation(parentColumn = "id", entityColumn = "city_id")
-    public List<TempEntity> seasonList;
 }

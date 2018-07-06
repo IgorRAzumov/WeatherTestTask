@@ -5,7 +5,7 @@ import android.arch.lifecycle.ViewModelProvider;
 import android.support.annotation.NonNull;
 
 import something.ru.weathertesttask.model.Repository;
-import something.ru.weathertesttask.ui.viewModel.MainActivityViewModel;
+import something.ru.weathertesttask.ui.viewModel.MainViewModel;
 
 public class MainViewModelFactory extends ViewModelProvider.NewInstanceFactory{
     private final Repository repository;
@@ -17,6 +17,6 @@ public class MainViewModelFactory extends ViewModelProvider.NewInstanceFactory{
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-        return (T) new MainActivityViewModel(repository);
+        return (T) new MainViewModel(repository);
     }
 }

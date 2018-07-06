@@ -1,38 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cl_act_main_root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="16dp">
+    android:layout_margin="@dimen/cl_act_main_root_view_margin">
 
     <include
-        layout="@layout/auto_complete_text_input_ly"
-        android:id="@+id/til_act_main_auto_complete_city"
+        android:id="@+id/actil_auto_complete_city"
+        layout="@layout/auto_complete_text_input_layout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <TextView
         android:id="@+id/tv_act_main_city_city_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:layout_marginStart="@dimen/tv_act_main_city_city_name_marg_start"
+        android:layout_marginTop="@dimen/tv_act_main_city_city_name_marg_top"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/til_act_main_auto_complete_city" />
+        app:layout_constraintTop_toBottomOf="@+id/actil_auto_complete_city"
+        tools:text="TextView" />
 
 
     <TextView
         android:id="@+id/tv_act_main_city_type_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="Тип города:"
+        android:layout_marginStart="@dimen/tv_act_main_city_type_label_marg_start"
+        android:layout_marginTop="@dimen/tv_act_main_city_type_label_marg_top"
+        android:text= "@string/tv_act_main_city_type_label_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_act_main_city_city_name" />
 
@@ -41,18 +42,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_act_main_city_type_label"
         app:layout_constraintStart_toEndOf="@+id/tv_act_main_city_type_label"
-        app:layout_constraintTop_toBottomOf="@+id/tv_act_main_city_city_name" />
+        tools:text="TextView" />
 
     <Spinner
         android:id="@+id/sp_act_main_city_seasons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="@dimen/sp_act_main_city_seasons_marg_vert"
+        android:layout_marginStart="@dimen/sp_act_main_city_seasons_marg_vert"
+        android:layout_marginTop="@dimen/sp_act_main_city_seasons_marg_top"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_act_main_city_type_label" />
@@ -62,10 +63,10 @@
         android:id="@+id/tv_act_main_avg_temp_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="CРЕДНЯЯ ТЕМПЕРАТУРА СОСТОВЛЯЕТ:"
+        android:layout_marginEnd="@dimen/tv_act_main_avg_temp_label_marg_end"
+        android:layout_marginStart="@dimen/tv_act_main_avg_temp_label_marg_vert"
+        android:layout_marginTop="@dimen/tv_act_main_avg_temp_label_marg_vert"
+        android:text="@string/tv_act_main_avg_temp_label_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sp_act_main_city_seasons" />
@@ -74,11 +75,11 @@
         android:id="@+id/tv_act_main_avg_temp_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:layout_marginEnd="@dimen/tv_act_main_avg_temp_text_marg_end"
+        android:layout_marginStart="@dimen/tv_act_main_avg_temp_text_marg_start"
+        android:layout_marginTop="@dimen/tv_act_main_avg_temp_text_marg_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_act_main_avg_temp_label" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_act_main_avg_temp_label"
+        tools:text="TextView" />
 </android.support.constraint.ConstraintLayout>

@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Weather Test Task</string>
     <string name="tiet_act_main_hint">Введите название города</string>
+    <string name="bt_buttons_bar_save_text">CХРАНИТЬ</string>
+    <string name="bt_buttons_bar_cancel_text">ОТМЕНИТЬ</string>
+    <string name="bt_buttons_bar_delete_text">УДАЛИТЬ</string>
+    <string name="tv_act_settings_city_type_label_text">ВЫБЕРИТЕ ТИП :</string>
+    <string name="tv_act_settings_city_name_label_text">НАЗВАНИЕ :</string>
+    <string name="et_month_item_month_temp_text">ВВЕДИТЕ ТЕМПЕРАТУРУ</string>
+    <string name="tv_act_main_avg_temp_label_text">CРЕДНЯЯ ТЕМПЕРАТУРА СОСТОВЛЯЕТ:</string>
+    <string name="tv_act_main_city_type_label_text">Тип города :</string>
+    <string name="first_run_key">first-run-key</string>
+    <string name="spinner_adapter_no_selected_text">ВЫБЕРИТЕ ТИП</string>
+    <string name="spinner_adapter_no_selected_season">ВЫБЕРИТЕ СЕЗОН :</string>
 </resources>

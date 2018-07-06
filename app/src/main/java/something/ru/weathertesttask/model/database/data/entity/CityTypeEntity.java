@@ -5,7 +5,11 @@ import android.arch.persistence.room.Ignore;
 import android.arch.persistence.room.Index;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "type", indices = {@Index(value = {"name"}, unique = true)})
+import static something.ru.weathertesttask.model.database.Contract.TABLE_CITY_COLUMN_NAME;
+import static something.ru.weathertesttask.model.database.Contract.TABLE_CITY_TYPE;
+
+@Entity(tableName = TABLE_CITY_TYPE,
+        indices = {@Index(value = {TABLE_CITY_COLUMN_NAME}, unique = true)})
 public class CityTypeEntity {
     @PrimaryKey(autoGenerate = true)
     private int id;

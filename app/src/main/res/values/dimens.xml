@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cl_act_main_root_view_margin">16dp</dimen>
+    <dimen name="tv_act_main_city_city_name_marg_start">8dp</dimen>
+    <dimen name="rv_act_settings_months_list_margin_top">16dp</dimen>
+    <dimen name="sp_act_settings_city_type_mar_bottom">16dp</dimen>
+    <dimen name="sp_act_settings_city_type_mar_start">16dp</dimen>
+    <dimen name="sp_act_settings_city_type_mar_top">16dp</dimen>
+    <dimen name="tv_act_settings_city_type_label_marg_top">16dp</dimen>
+    <dimen name="tv_act_settings_city_type_label_mar_start">8dp</dimen>
+    <dimen name="tv_act_settings_city_type_label_mar_bottom">16dp</dimen>
+    <dimen name="et_act_settings_city_name_marg_start">8dp</dimen>
+    <dimen name="tv_act_settings_city_name_label_marg_top">16dp</dimen>
+    <dimen name="tv_act_settings_city_name_label_marg_start">8dp</dimen>
+    <dimen name="et_month_item_month_temp_marg_start">8dp</dimen>
+    <dimen name="tv_auto_complete_item_city_type_marf_rigth">8dp</dimen>
+    <dimen name="tv_auto_complete_item_city_type_marf_top">8dp</dimen>
+    <dimen name="tv_auto_complete_item_city_name_marg_top">8dp</dimen>
+    <dimen name="tv_auto_complete_item_city_name_marg_start">8dp</dimen>
+    <dimen name="tv_auto_complete_item_city_name_trans_z">12dp</dimen>
+    <dimen name="tv_act_main_avg_temp_label_marg_vert">24dp</dimen>
+    <dimen name="tv_act_main_avg_temp_label_marg_end">8dp</dimen>
+    <dimen name="sp_act_main_city_seasons_marg_vert">8dp</dimen>
+    <dimen name="sp_act_main_city_seasons_marg_top">16dp</dimen>
+    <dimen name="tv_act_main_city_type_text_marg_top">8dp</dimen>
+    <dimen name="tv_act_main_city_type_text_marg_start">8dp</dimen>
+    <dimen name="tv_act_main_city_type_label_marg_top">8dp</dimen>
+    <dimen name="tv_act_main_city_type_label_marg_start">8dp</dimen>
+    <dimen name="tv_act_main_city_city_name_marg_top">8dp</dimen>
+    <dimen name="tv_act_main_avg_temp_text_marg_end">8dp</dimen>
+    <dimen name="tv_act_main_avg_temp_text_marg_start">8dp</dimen>
+    <dimen name="tv_act_main_avg_temp_text_marg_top">8dp</dimen>
+</resources>

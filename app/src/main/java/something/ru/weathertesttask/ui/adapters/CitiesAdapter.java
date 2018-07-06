@@ -1,4 +1,4 @@
-package something.ru.weathertesttask.ui;
+package something.ru.weathertesttask.ui.adapters;
 
 import android.content.Context;
 import android.support.annotation.LayoutRes;
@@ -13,18 +13,17 @@ import android.widget.TextView;
 import java.util.List;
 
 import something.ru.weathertesttask.R;
-import something.ru.weathertesttask.model.database.data.entity.CityEntity;
+import something.ru.weathertesttask.model.database.data.CityWithType;
 
 
 public class CitiesAdapter extends ArrayAdapter {
-    private List<CityEntity> cities;
+    private List<CityWithType> cities;
     private int itemLayout;
     private Filter filter;
 
-    public CitiesAdapter(@NonNull Context context, @LayoutRes int resource, Filter filter) {
+    public CitiesAdapter(@NonNull Context context, @LayoutRes int resource) {
         super(context, resource);
         itemLayout = resource;
-        this.filter = filter;
     }
 
     @Override
@@ -33,7 +32,7 @@ public class CitiesAdapter extends ArrayAdapter {
     }
 
     @Override
-    public CityEntity getItem(int position) {
+    public CityWithType getItem(int position) {
         return cities.get(position);
     }
 
@@ -45,26 +44,22 @@ public class CitiesAdapter extends ArrayAdapter {
                     .from(parent.getContext())
                     .inflate(itemLayout, parent, false);
         }
-        CityEntity cityEntity = getItem(position);
+
+        CityWithType cityWithType = cities.get(position);
         TextView cityName = view.findViewById(R.id.tv_auto_complete_item_city_name);
         TextView cityType = view.findViewById(R.id.tv_auto_complete_item_city_type);
-        cityName.setText(cityEntity.getName());
-        cityType.setText(String.valueOf(cityEntity.getTypeId()));
+        cityName.setText(cityWithType.city.getName());
+        cityType.setText(String.valueOf(cityWithType.getTypeName()));
         return view;
     }
 
-    @NonNull
-    @Override
-    public Filter getFilter() {
-        return filter;
-    }
 
-    public void setData(List<CityEntity> cities) {
+    public void setData(List<CityWithType> cities) {
         this.cities = cities;
         notifyDataSetChanged();
     }
 
-    public CityEntity getData(int position) {
+    public CityWithType getData(int position) {
         return cities.get(position);
     }
 }

@@ -10,11 +10,17 @@ import java.util.List;
 
 import something.ru.weathertesttask.model.database.data.entity.MonthEntity;
 
+import static something.ru.weathertesttask.model.database.Contract.TABLE_MONTH;
+
 @Dao
 public interface MonthDao {
-    @Query("select id,name from month")
+    @Query("select * from  " + TABLE_MONTH)
     LiveData<List<MonthEntity>> getMonths();
+
+    @Query("select count(*) from " + TABLE_MONTH )
+    LiveData<Integer> getMonthsCount();
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(MonthEntity... seasons);
+
 }

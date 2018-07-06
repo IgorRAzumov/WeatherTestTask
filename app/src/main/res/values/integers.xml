@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="bt_buttons_bar_empty_view_weight">1</integer>
+    <integer name="et_act_settings_city_name_ems">5</integer>
+    <integer name="et_month_item_month_temp_ems">5</integer>
+    <integer name="et_month_item_month_temp_weight">1</integer>
+    <integer name="actv_act_main_city_entry_thershold">3</integer>
+    <integer name="view_act_main_city_devider_weigth">1</integer>
+</resources>
